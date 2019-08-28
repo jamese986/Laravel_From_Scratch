@@ -1,2 +1,2 @@
-# Laravel_From_Scratch
-Laracast Video series
+# Laravel From Scratch
+
