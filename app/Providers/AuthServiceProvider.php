@@ -30,7 +30,7 @@ class AuthServiceProvider extends ServiceProvider
         //
         $gate->before(function ($user) {
 
-            return $user->id == 2;
+            return $user->id == 1;
         });
     }
 }
