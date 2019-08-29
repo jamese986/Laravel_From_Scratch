@@ -1,8 +1,11 @@
 @extends('layout')
 
 @section('content')
-
-    <h1 class="title">Edit Project</h1>
+    <section class="hero is-small is-warning is-bold box">
+        <div class="hero body">
+            <h1 class="title">Edit Project</h1>
+        </div>
+    </section>
 
     <form method="POST" action="/projects/{{ $project->id }}">
         @method('PATCH')
@@ -26,7 +29,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Update Project</button>
+                <button type="submit" class="button is-primary">Update Project</button>
             </div>
         </div>
     </form>
@@ -39,7 +42,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button">Delete Project</button>
+                <button type="submit" class="button is-danger">Delete Project</button>
             </div>
         </div>
     </form>

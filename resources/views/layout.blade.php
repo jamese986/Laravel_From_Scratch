@@ -18,6 +18,11 @@
       @yield('content')
     </div>
 
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Projects</strong> Laracast From Scratch</p>
+        </div>
+    </footer>
 
   </body>
 </html>
