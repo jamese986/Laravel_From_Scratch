@@ -2,13 +2,17 @@
 
 @section('content')
 
-<h1 class="title">{{ $project->title }}</h1>
-<div class="content">
-  {{ $project->description }}
-  <p>
-    <a href="/projects/{{ $project->id }}/edit">Edit</a>
-  </p>
-</div>
+    <section class="hero is-small is-danger is-bold box">
+        <div class="hero body">
+            <h1 class="title">{{ $project->title }}</h1>
+        </div>
+    </section>
+    <div class="content box">
+      {{ $project->description }}
+      <p>
+        <a href="/projects/{{ $project->id }}/edit">Edit</a>
+      </p>
+    </div>
 
     @if ($project->tasks->count())
         <div class="box">
