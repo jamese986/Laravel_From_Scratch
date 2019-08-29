@@ -1,8 +1,11 @@
 @extends('layout')
 
 @section('content')
-
-    <h1 class="title">Create a New Project </h1>
+    <section class="hero is-small is-success is-bold box">
+        <div class="hero body">
+            <h1 class="title">Create a New Project </h1>
+        </div>
+    </section>
     <form method="POST" action="/projects">
         @csrf
         <div class="field">
