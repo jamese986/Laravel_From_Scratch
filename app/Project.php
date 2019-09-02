@@ -2,12 +2,18 @@
 
 namespace App;
 
+use App\Events\ProjectCreated;
 use Illuminate\Database\Eloquent\Model;
 
 class project extends Model
 {
 
     protected $guarded = [];
+
+    protected $dispatchesEvents = [
+
+        'created' => ProjectCreated::class
+    ];
 
     public function owner()
     {
