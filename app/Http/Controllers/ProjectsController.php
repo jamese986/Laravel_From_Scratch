@@ -5,8 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ProjectCreated;
 
+//use App\Mail\ProjectCreated;
+use App\Events\ProjectCreated;
+
+/*
+ * Getting Errors when running both mailer and event
+ * In the same class will resolve once Event + Listener
+ * is working
+ */
 
 class ProjectsController extends Controller
 {
@@ -33,7 +40,9 @@ class ProjectsController extends Controller
 
         $attributes['owner_id'] = auth()->id();
 
-        Project::create($attributes);
+        $project = Project::create($attributes);
+
+        event(new ProjectCreated($project));
 
         return redirect('/projects');
     }
